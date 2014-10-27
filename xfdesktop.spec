@@ -1,20 +1,20 @@
-%define		xfce_version	4.10.0
+%define		xfce_version	4.11.0
 
 Summary:	Desktop manager for the Xfce Desktop Environment
 Name:		xfdesktop
-Version:	4.10.2
+Version:	4.11.8
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/xfce/xfdesktop/4.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	54a84ce63046c279fc3ec3f436d2f1b0
+Source0:	http://archive.xfce.org/src/xfce/xfdesktop/4.11/%{name}-%{version}.tar.bz2
+# Source0-md5:	dd716b6e594aa876ec2674c994c74a57
 URL:		http://www.xfce.org/
 BuildRequires:	Thunar-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
 BuildRequires:	exo-devel
-BuildRequires:	garcon-devel
+BuildRequires:	garcon-devel >= 0.3.0
 BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
@@ -26,11 +26,11 @@ BuildRequires:	libxml2-devel
 BuildRequires:	pkg-config
 BuildRequires:	xfce4-dev-tools >= %{xfce_version}
 BuildRequires:	xfce4-panel-devel >= %{xfce_version}
-BuildRequires:	xfconf-devel >= %{xfce_version}
+BuildRequires:	xfconf-devel >= 4.10.0
 Requires(post,postun):	gtk+-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Requires:	exo
-Requires:	garcon
+Requires:	garcon >= 0.3.0
 Requires:	xfconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
